@@ -13,6 +13,7 @@ class LoginPageLocators():
     PASS2_INPUT = (By.CSS_SELECTOR, "#id_registration-password2")
     REGISTER_BUTTON = (By.NAME, "registration_submit")
 
+
 class ProductPageLocators():
     ADD_TO_BASKET_BUTTON = (By.CSS_SELECTOR, ".add-to-basket .btn")
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages :nth-child(1) > .alertinner")
@@ -26,6 +27,7 @@ class BasePageLocators():
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     BASKET_BUTTON = (By.XPATH, "//div/span/a")
     USER_ICON = (By.CSS_SELECTOR, ".icon-user")
+
 
 class BasketPageLocators():
     BASKET_IS_EMPTY_MESSAGE = (By.CSS_SELECTOR, "#content_inner")
