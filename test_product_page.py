@@ -74,18 +74,17 @@ class TestUserAddToBasketFromProductPage():
         page.go_to_login_page()
         login_page = LoginPage(browser, browser.current_url)
         login_page.register_new_user(email, password)
+        page.should_be_authorized_user()
 
     def test_user_cant_see_success_message(self, browser):
         page = ProductPage(browser, link)
         page.open()
-        page.should_be_authorized_user()
         page.should_not_be_success_message()
 
     @pytest.mark.need_review
     def test_user_can_add_product_to_basket(self, browser):
         page = ProductPage(browser, link)
         page.open()
-        page.should_be_authorized_user()
         page.should_add_to_basket()
         page.should_be_success_message()
         page.should_be_correct_amount()
